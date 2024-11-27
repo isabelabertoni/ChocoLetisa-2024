@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>ChocoLetisa -  Chocolates</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <!--slick slider stylesheet -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- slick slider -->
+
+  <link rel="stylesheet" href="css/slick-theme.css" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <style>
+    /* Estilo básico */
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .stars {
+        display: inline-block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    /* Estrelas em cinza */
+    .star {
+        color: #ccc;
+    }
+
+    /* Estrelas douradas quando selecionadas */
+    input[type="radio"]:checked ~ label.star {
+        color: gold;
+    }
+
+    /* Esconde os botões de rádio */
+    input[type="radio"] {
+        display: none;
+    }
+
+    /* Quando o mouse passar sobre as estrelas */
+    .stars label:hover,
+    .stars label:hover ~ label {
+        color: gold;
+    }
+
+    /* Mensagem de agradecimento */
+    .message {
+        margin-top: 20px;
+        font-size: 20px;
+    }
+</style>
+</head>
+
+<body class="sub_page">
+
+  <div class="main_body_content">
+
+    <div class="hero_area">
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              ChocoLetisa
+            </a>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="about.html">Sobre</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="testimonial.html">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="chocolate.html">Produtos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="galery.html">Galeria</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contato</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+    </div>
+
+
+    <!-- contact section -->
+    <!-- contact section -->
+<section class="contact_section layout_padding">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-5 col-lg-4 offset-md-1 offset-lg-2">
+        <div class="form_container">
+          <div class="heading_container">
+            <h2>
+              Fale Conosco!
+            </h2>
+          </div>
+          <form name="contato1" action="#" method="post" class="article14" onsubmit="return validarFormulario()">
+            <div>
+              <input type="text" id="nome" placeholder="Nome completo" />
+            </div>
+            <div>
+              <input type="email" id="email" placeholder="Email" />
+            </div>
+            <div class="stars">
+              <input type="radio" id="star5" name="rating" value="5" />
+              <label class="star" for="star5">&#9733;</label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label class="star" for="star4">&#9733;</label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label class="star" for="star3">&#9733;</label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label class="star" for="star2">&#9733;</label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label class="star" for="star1">&#9733;</label>
+            </div>
+            <div>
+              <input type="text" class="message-box" id="mensagem" placeholder="Mensagem" />
+            </div>
+            <div class="d-flex ">
+              <button type="submit">
+                Mande Agora
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function validarFormulario() {
+    // Validar nome
+    var nome = document.getElementById('nome').value;
+    if (nome == "") {
+      alert("Por favor, insira o seu nome completo.");
+      return false;
+    }
+
+    // Validar email
+    var email = document.getElementById('email').value;
+    var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email == "" || !emailPattern.test(email)) {
+      alert("Por favor, insira um email válido.");
+      return false;
+    }
+
+    // Validar classificação de estrelas
+    var rating = document.getElementsByName('rating');
+    var ratingChecked = false;
+    for (var i = 0; i < rating.length; i++) {
+      if (rating[i].checked) {
+        ratingChecked = true;
+        break;
+      }
+    }
+    if (!ratingChecked) {
+      alert("Por favor, escolha uma classificação de estrelas.");
+      return false;
+    }
+
+    // Se tudo estiver válido
+    alert("Formulário enviado com sucesso!");
+    return true;
+  }
+</script>
+    <!-- end contact section -->
+
+
+    <!-- info section -->
+    <section class="info_section layout_padding2">
+      <div class="container">
+        <div class="row info_main_row">
+          <div class="col-md-6 col-lg-3">
+            <div class="info_links">
+              <h4>
+                Menu
+              </h4>
+              <div class="info_links_menu">
+                <a href="index.html">
+                  Home
+                </a>
+                <a href="about.html">
+                  Sobre
+                </a>
+                <a href="testimonial.html">
+                  Serviços
+                </a>
+                <a href="chocolate.html">
+                  Produtos
+                </a>
+                <a href="galery.html">
+                  Galeria
+                </a>
+                <a href="contact.html">
+                  Contato
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="info_insta">
+              <h4>
+                Chocolates
+              </h4>
+              <div class="insta_box">
+                <div class="img-box">
+                  <img src="images/minichoco.png" alt="">
+                </div>
+                <p>
+                  Barras recheadas
+                </p>
+              </div>
+              <div class="insta_box">
+                <div class="img-box">
+                  <img src="images/bombom.png" alt="">
+                </div>
+                <p>
+                  Trufas e bombons recheados
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="info_detail">
+              <h4>
+                Empresa
+              </h4>
+              <p class="mb-0">
+                Transformamos chocolate em momentos inesquecíveis com qualidade e sabor.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <h4>
+              Entre em contato
+            </h4>
+            <div class="info_contact">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Rua Fernandes dos Amarais, Jardim Oliveira, 1118 - Campinas/SP - Brasil
+                </span>
+                <br>
+                <br>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Ligue +55 19 379061590
+                </span>
+                <br>
+                <br>
+                <i class="fa fa-envelope"></i>
+                <span>
+                  chocoletisa@gmail.com
+                </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end info_section -->
+
+  </div>
+
+  <!-- footer section -->
+  <footer class="container-fluid footer_section">
+    <div class="container">
+      <div class="col-md-11 col-lg-8 mx-auto">
+        <p>
+          <center><h5>ChocoLetisa - 2024 - &copy Todos os direitos reservados.<br>
+          <i>Trabalho acadêmico sem fins lucrativos</i></h5></center>
+        </p>  
+          <div align="right">
+          <a href="#"><img src="images/sobe9.png" width="4%" class="rodape"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
